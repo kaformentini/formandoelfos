@@ -1,0 +1,59 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var brush = tela.getContext('2d');
+
+    brush.fillStyle = 'lightgray';
+    brush.fillRect(0, 0, 600, 400);
+
+    let serieText = ['Chrome', 'Firefox', 'Safari', 'Outros']
+    let colors = ['blue', 'green', 'yellow', 'red'];
+    
+    let serie2015 = [50, 25, 20, 5];
+    let serie2016 = [65, 20, 13, 2];
+    let serie2017 = [65, 20, 13, 2];
+
+    let allSeries = [[serie2015, '2015'], [serie2016, '2016'], [serie2017, '2017']]
+    
+
+    function selectionSerie(allSeries, text){
+        
+                
+        for (let i = 0; i < allSeries.length; i++){
+            console.log("ok")
+
+            brush.font = '15px Georgia'
+            brush.fillStyle = 'black'
+            brush.fillText(allSeries[i][1], i * 75 , 10)
+            desenhaBarra(allSeries[i][0], i, text)
+                      
+        }
+
+    }
+    
+    function desenhaBarra(serie, distance, text){
+        // console.log(distance)
+        let colors = ['blue', 'green', 'yellow', 'red'];
+        let acc = 50
+        for (let i = 0; i < serie.length; i++) {
+            // console.log(acc)
+
+            
+            brush.font = '15px Georgia'
+            brush.fillStyle = 'black'
+            brush.fillText(text[i], distance * 75, acc)
+
+            brush.fillStyle = colors[i]
+            brush.fillRect(distance * 75, acc, 50, serie[i])
+            acc = acc + serie[i] 
+        }
+        
+    }
+
+    selectionSerie(allSeries, serieText)
+    
+    
+
+
+</script>
