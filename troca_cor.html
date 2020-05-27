@@ -23,7 +23,8 @@
         var y = evento.pageY - tela.offsetTop;
 
         
-        evento.shiftKey ? ballSize = ballSize + 10 : ballSize
+        evento.shiftKey && ballSize < 40 ? ballSize = ballSize + 10 : ballSize
+        evento.ctrlKey && ballSize > 10 ? ballSize = ballSize - 5 : ballSize
 
         pincel.fillStyle = color;
         pincel.beginPath();
