@@ -1,0 +1,52 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    let radius = 20;
+    let growUp = true;
+
+
+    function pulseBall() {
+        // let x = event.pageX - tela.offsetLeft;
+        // let y = event.pageY - tela.offsetTop;
+
+        limpaTela();
+        desenhaCirculo(150, 150, radius, 'blue')
+    
+        if(radius > 30) {
+            growUp = false;
+        } else if (radius < 20) {
+            growUp = true;
+        };
+
+        console.log(radius)
+
+        growUp ? radius++ : radius--
+ 
+    }
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpaTela() {
+
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+
+
+
+
+    setInterval(pulseBall, 50);
+
+</script>
