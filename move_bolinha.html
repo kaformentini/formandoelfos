@@ -20,24 +20,26 @@
         pincel.clearRect(0, 0, 600, 400);
     }
 
-    function returnBall {
-        x--
-        desenhaCirculo(x, 20, 10);
+    function forward(positionX) {
+        if (positionX == 20) {forwardCheck = true}
+        if (positionX == 580) {forwardCheck = false}
     }
-    s
+    
 
 
     var x = 20;
+    let forwardCheck = true;
 
     function atualizaTela() {
 
         limpaTela();
-        (x > 380) ? returnBall : fowardBall
-        
-        
-
+        desenhaCirculo(x, 20, 10);
+        // console.log(x)
+        forward(x)
+        forwardCheck ? x++ : x--
+        // console.log(x)
     }
 
-    setInterval(atualizaTela, 1000);
+    setInterval(atualizaTela, 10);
 
 </script>
