@@ -1,0 +1,78 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var raio = 15;
+    let randomX;
+    let randomY;
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function drawTarget(x, y) {
+
+        console.log(`x random= ${x}, y random = ${y}`)
+        desenhaCirculo(x, y, raio + 20, 'red'); // maior círculo
+        desenhaCirculo(x, y, raio + 10, 'white');
+        desenhaCirculo(x, y, raio, 'red'); // menor circulo
+
+
+
+    }
+
+    function cleanScreen() {
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    function randomPosition(maximum) {
+        let position = Math.random();
+        // console.log(position)
+        return Math.floor(position * maximum); // vezes maximo porque nunca vai dar 600 pois é um numero aleatoria de 0 - 1
+
+    }
+
+    function dispara(event) {
+        var x = event.pageX - tela.offsetLeft;
+        var y = event.pageY - tela.offsetTop;
+
+        console.log(`x = ${x} randoX = ${randomX - 15} - ${randomX + 15} y = ${y} randoY = ${randomY - 15} - ${randomY + 15}`)
+
+        if ((x > randomX - raio)
+            && (x < randomX + raio)
+            && (y > randomY - raio)
+            && (y < randomY + raio)) {
+            alert('Acertou');
+        }
+
+
+
+    }
+
+    function reloadScreen() {
+        cleanScreen();
+        randomX = randomPosition(600);
+        randomY = randomPosition(400);
+
+        drawTarget(randomX, randomY);
+    }
+
+    setInterval(reloadScreen, 1700);
+    tela.onclick = dispara;
+
+
+
+
+
+
+</script>
