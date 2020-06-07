@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    function mostra(texto){
+        document.write(texto);
+        pulaLinha();
+    };
+
+    function sorteiaNum(){
+        var numPensado = Math.round(Math.random() * 100);
+        console.log(numPensado)
+        return numPensado;
+    }
+
+    function coletaNum(texto){
+        var numChutado = parseInt(prompt(texto));
+        return numChutado
+    }
+
+    function maiorMenor(num, numSorteado) {
+        if (num > numSorteado) {
+            return "O número é MENOR"
+        } else {
+            return "O número é MAIOR"
+        }
+    }
+    
+    function confirma(numChutado, numSorteado){
+        
+        if (numChutado == numSorteado) return mostra("Parabéns! Você acertou. Era " + numSorteado);
+        var novoNumChutado = coletaNum(maiorMenor(numChutado, numSorteado));
+        confirma(novoNumChutado, numSorteado);
+    }
+
+    var numSorteado = sorteiaNum(); 
+    var numChutado = coletaNum("Que número estou pensando?");
+    
+    confirma(numChutado, numSorteado);
+    
+</script>
