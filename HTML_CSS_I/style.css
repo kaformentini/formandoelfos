@@ -1,0 +1,49 @@
+body {
+
+}
+
+.center-text {
+    text-align: center
+}
+
+p {
+    text-align: center
+}
+
+ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+em strong {
+    color: red
+}
+
+#mission {
+    font-size: 20px
+}
+
+#banner{
+    width: 100%;
+}
+
+.principal-title {
+    padding-left: 20px;
+}
+
+.principal {
+    background: #cccccc;
+    padding: 30px;
+}
+.bene   fits {
+    background: white;
+    padding: 20px;
+}
+.list-item {
+    font-style: italic;
+}
+.benefits-img {
+    width: 50%;
+}
