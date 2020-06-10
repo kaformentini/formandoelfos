@@ -1,0 +1,45 @@
+.products {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    
+}
+
+.products li {
+    margin: 0 1.5%;
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.products li:hover {
+    border-color: #c78c19;
+}
+
+.products li:active {
+    border-color: seagreen;
+}
+
+.products li:hover h2 {
+    font-size: 34px;
+}
+
+.products h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.description-product {
+    font-size: 18px;
+}
+
+.price-product {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
