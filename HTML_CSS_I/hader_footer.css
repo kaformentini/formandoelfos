@@ -1,6 +1,8 @@
 header {
     background: #fff;
-    /* padding: 5px; */
+    /* padding: 5px;
+    border-bottom: 3px solid black; */
+    
 }
 
 nav {
@@ -32,7 +34,6 @@ nav a:hover {
     position: relative;
     width: 940px;
     margin: 0 auto;
-
 }
 
 footer {

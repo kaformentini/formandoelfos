@@ -1,0 +1,68 @@
+.center-text {
+    text-align: center
+}
+
+p {
+    text-align: center
+}
+
+
+em strong {
+    color: #c78c19
+}
+
+h2 {
+    color: white;
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+
+h3 {
+    font-size: 25px;
+    padding: 20px;
+}
+
+.benefits-list {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+#mission {
+    
+    margin: 20px auto;
+    font-size: 20px
+}
+
+#banner{
+    width: 100%;
+    margin: 0px 0 0 0;
+}
+
+.principal-title {
+    padding-left: 20px;
+}
+
+.principal-div{
+    background: url("imagens/bg.jpg");
+    padding: 30px 0 30px 0 ;
+}
+
+.principal-div p {
+    width: 940px;
+    color: white;
+    margin: 0 auto; 
+}
+.benefits {
+    background: white;
+    padding: 20px;
+}
+.list-item {
+    font-size: 30px;
+    font-style: italic;
+    text-align: right;
+}
+.benefits-img {
+    width: 50%;
+}
