@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Barbearia Alura</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hader_footer.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
 
@@ -26,13 +27,12 @@
             </nav>
         </div>
     </header>
+    <img class="banner" src="imagens/banner.jpg" alt="banner, foto da loja">
+    <main>
+        <section class="principal">
+            <h2 class="title-principal">Sobre a Barbearia Alura</h2>
 
-    <img id="banner" src="imagens/banner.jpg" alt="banner, foto da loja">
-
-    <div class="principal-div">
-
-
-        <h2 class="center-text">Sobre a Barbearia Alura</h2>
+            <img class="tools-img" src="imagens/utensilios.jpg" alt="utencilios de barbearia">
 
             <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de
                 melhor
@@ -47,20 +47,40 @@
             <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui
                 padrão de
                 excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+        </section>
 
-    </div>
+        <section class="map">
+            <h3 class="title-principal">Localização</h3>
+            <p>Estamos localizados no coração da cidade.</p>
+            <div class="map-content">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.8767892252304!2d-46.6328518745934!3d-23.58756123604585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1592358694914!5m2!1spt-BR!2sbr"
+                    width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0">
+                </iframe>
+            </div>
+        </section>
 
-    <div class="benefits">
-        <h3 class="center-text">Benefícios</h3>
-            <ul class="benefits-list">
-                <li class="list-item">Atendimento ao cliente;</li>
-                <li class="list-item">Espaço diferenciado;</li>
-                <li class="list-item">Localização;</li>
-                <li class="list-item">Profissionais qualificados.</li>
-            </ul>
-            <img src="imagens/beneficios.jpg" alt="imagem de corte" class="benefits-img">
+        <section class="benefits">
+            <div class="benefits-content">
+                <h3 class="title-principal">Benefícios</h3>
+                <ul class="benefits-list">
+                    <li class="list-item">Atendimento ao cliente</li>
+                    <li class="list-item">Espaço diferenciado</li>
+                    <li class="list-item">Localização</li>
+                    <li class="list-item">Profissionais qualificados</li>
+                    <li class="list-item">Pontualidade</li>
+                    <li class="list-item">Limpeza</li>
+                </ul><img src="imagens/beneficios.jpg" alt="imagem de corte" class="benefits-img">
+            </div>
+            <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
 
-    </div>
+
+    </main>
     <footer>
         <img src="imagens/logo-branco.png" alt="Logo Barbearia Alura">
         <p class="copyright">&copy Copyright Barbearia Alura - 2020</p>
