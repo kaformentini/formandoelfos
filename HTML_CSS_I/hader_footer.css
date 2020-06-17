@@ -48,3 +48,24 @@ footer {
     margin: 20px 0 0;
     
 }
+
+@media screen and (max-width: 480px) {
+    .box {
+        width: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+
+    nav ul {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav li:last-child{
+        margin-right: 0;
+    }
+}

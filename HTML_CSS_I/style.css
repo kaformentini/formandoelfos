@@ -10,11 +10,18 @@ form {
     margin: 40px 0;
 }
 
-form label, form legend {
+form label {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
 }
+
+form legend {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 
 table {
     width: 50%;
@@ -200,6 +207,52 @@ td, th {
 }
 
 @media screen and (max-width: 480px) {
-    body {
+    .principal, .benefits-list, .map-content, .video {
+        width: auto;
     }
+
+    .principal, .map, .benefits {
+        padding: 1em;
+    }
+
+    .benefits-content {
+        width: auto;
+        text-align: center;
+    }
+
+    .products {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0;
+
+    }
+
+    .products li {
+        flex-basis: 100%;
+        margin: 1em;
+    }
+
+
+    form {
+        padding: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    
+
+    .input-standart {
+        width: 100%;
+    }
+
+    .submit {
+        margin: auto;
+    }
+    
+    table {
+        margin: auto;
+        margin-bottom: 40px;
+    } 
+
 }
