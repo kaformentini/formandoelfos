@@ -5,10 +5,14 @@ addPatientButton.addEventListener("click", function (event) {
   const formReq = document.querySelector("#form-adiciona");
 
   const patient = patientCreate(formReq);
-  
-  if (validateData(patient)) {
-    patientError();
+  errors = validateData(patient);
+
+  if (errors.length > 0) {
+    patientError(errors);
     return;
+  } else {
+    const errorMsg = document.querySelector("#error-msg");
+    errorMsg.innerHTML = "";
   }
 
   const patientTr = createTr(patient);
@@ -50,14 +54,30 @@ function createTr(patient) {
 }
 
 function validateData(patient) {
-  return validateAltura(patient.weigth.value) &&
-    validatePeso(patient.heigth.value)
-    ? true
-    : false;
+  const errorsValidate = [];
+  console.log(patient);
+  if (!validateName(patient.name)) {
+    errorsValidate.push("Nome");
+  }
+  if (!validatePeso(patient.weigth)) {
+    errorsValidate.push("Peso");
+  }
+  if (!validateAltura(patient.heigth)) {
+    errorsValidate.push("Altura");
+  }
+  if (!validateFat(patient.fat)) {
+    errorsValidate.push("Gordura");
+  }
+  // if (!validateImc(patient.imc)) {
+  //   errorsValidate.push("Campos com letras");
+  // }
+  
+  return errorsValidate;
 }
 
-function patientError() {
+function patientError(errors) {
   const errorMsg = document.querySelector("#error-msg");
-  errorMsg.textContent = "Dados inválidos";
+  errorMsg.innerHTML = "";
+  errorMsg.textContent = `Dados inválidos: ${errors.join(", ")}`;
   errorMsg.classList.add("error-msg");
 }

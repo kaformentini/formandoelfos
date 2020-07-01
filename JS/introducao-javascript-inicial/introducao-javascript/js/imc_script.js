@@ -27,14 +27,24 @@ for (var i = 0; i < patients.length; i++) {
   }
 }
 
-function imcCalculation(peso, altura){
-  return (peso / (altura * altura)).toFixed(2)
+function imcCalculation(peso, altura) {
+  return (peso / (altura * altura)).toFixed(2);
 }
 
+function validateName(name) {
+  return name == "" ? false : true;
+}
+
+function validatePeso(peso) {
+  console.log(peso)
+  return peso <= 0 || peso > 300 || peso == "" ? false : true;
+}
 function validateAltura(altura) {
-  return (altura <= 0 || altura >= 3)? false : true;
- }
- 
- function validatePeso(peso) {
-   return (peso <= 0 || peso > 500)? false : true;
-  }
+  return altura <= 0 || altura >= 3 || altura == "" ? false : true;
+}
+function validateFat(fat) {
+  return fat == "" ? false : true;
+}
+// function validateImc(imc) {
+//   return imc == "" ? false : true;
+// }
