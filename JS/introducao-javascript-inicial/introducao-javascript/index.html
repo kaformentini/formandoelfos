@@ -21,6 +21,7 @@
 		<section class="container">
 			<h2>Meus pacientes</h2>
 			<table>
+				<input type="text" name="filtro" id="query-patient" placeholder="Buscar paciente">
 				<thead>
 					<tr>
 						<th>Nome</th>
@@ -41,7 +42,7 @@
 
 					<tr class="paciente">
 						<td class="info-nome">João</td>
-						<td class="info-peso">5000</td>
+						<td class="info-peso">50</td>
 						<td class="info-altura">1.72</td>
 						<td class="info-gordura">40</td>
 						<td class="info-imc">0</td>
@@ -49,7 +50,7 @@
 
 					<tr class="paciente">
 						<td class="info-nome">Erica</td>
-						<td class="info-peso">54</td>
+						<td class="info-peso">5400</td>
 						<td class="info-altura">1.64</td>
 						<td class="info-gordura">14</td>
 						<td class="info-imc">0</td>
@@ -65,13 +66,15 @@
 					<tr class="paciente">
 						<td class="info-nome">Tatiana</td>
 						<td class="info-peso">46</td>
+
 						<td class="info-altura">1.55</td>
 						<td class="info-gordura">19</td>
 						<td class="info-imc">0</td>
 					</tr>
 				</tbody>
-			</table>
 
+			</table>
+			<button id="get-patients" class="botao bto-principal">Buscar Pacientes</button>
 		</section>
 		<section class="container">
 			<h2 id="titulo-form">Adicionar novo paciente</h2>
@@ -98,6 +101,7 @@
 				</div>
 
 				<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+
 			</form>
 		</section>
 	</main>
@@ -105,6 +109,9 @@
 	<script src="js/imc_script.js"></script>
 	<script src="js/form_script.js"></script>
 	<script src="js/delete_patient.js"></script>
+	<script src="js/query_patient.js"></script>
+	<script src="js/get_patients_list.js"></script>
+
 
 
 </body>

@@ -46,8 +46,9 @@ section{
 section h2{
 	font-size: 3em;
 	display: block;
-	padding-bottom: .5em;
+	padding-bottom: .2em;
 	border-bottom: 1px solid #ccc;
+	margin-top: .5em;
 	margin-bottom: .5em;
 }
 
@@ -148,3 +149,14 @@ button[disabled=disabled], button:disabled {
 	opacity: 0;
 	transition: 0.5s;
 }
+
+#query-patient {
+	width: 100%;
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+.invisible {
+	display: none;
+}
+

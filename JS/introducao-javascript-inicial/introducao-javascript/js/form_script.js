@@ -15,11 +15,8 @@ addPatientButton.addEventListener("click", function (event) {
     errorMsg.innerHTML = "";
   }
 
-  const patientTr = createTr(patient);
+  addPatientOnTable(patient);
 
-  const table = document.querySelector("#tabela-pacientes");
-
-  table.appendChild(patientTr);
   formReq.reset();
 });
 
@@ -32,6 +29,19 @@ function patientCreate(formReq) {
     imc: imcCalculation(formReq.peso.value, formReq.altura.value),
   };
   return patient;
+}
+
+function addPatientOnTableIngles(patient) {
+  
+  const patientTr = createTr(patient);
+  const table = document.querySelector("#tabela-pacientes");
+  table.appendChild(patientTr);
+}
+function addPatientOnTablePt(patient) {
+  console.log(patient);
+  const patientTr = createTrPt(patient);
+  const table = document.querySelector("#tabela-pacientes");
+  table.appendChild(patientTr);
 }
 
 function createTd(dado, classe) {
@@ -47,6 +57,18 @@ function createTr(patient) {
   patientTr.appendChild(createTd(patient.weigth, "info-peso"));
   patientTr.appendChild(createTd(patient.heigth, "info-altura"));
   patientTr.appendChild(createTd(patient.fat, "info-gordura"));
+  patientTr.appendChild(createTd(patient.imc, "info-imc"));
+
+  patientTr.classList.add("paciente");
+  return patientTr;
+}
+
+function createTrPt(patient) {
+  const patientTr = document.createElement("tr");
+  patientTr.appendChild(createTd(patient.nome, "info-nome"));
+  patientTr.appendChild(createTd(patient.peso, "info-peso"));
+  patientTr.appendChild(createTd(patient.altura, "info-altura"));
+  patientTr.appendChild(createTd(patient.gordura, "info-gordura"));
   patientTr.appendChild(createTd(patient.imc, "info-imc"));
 
   patientTr.classList.add("paciente");
@@ -71,7 +93,7 @@ function validateData(patient) {
   // if (!validateImc(patient.imc)) {
   //   errorsValidate.push("Campos com letras");
   // }
-  
+
   return errorsValidate;
 }
 
